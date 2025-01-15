@@ -33,7 +33,7 @@ PAL 1
 PAL 2
 0,0,0
 0,216,0
-255,149,0
+255,243,5
 
 ROOM 0
 0,n,n,n,a,a,a,0,0,0,0,0,a,0,a,0
@@ -132,17 +132,19 @@ q,0,0,0,0,0,0,0,0,0,0,0,0,0,0,q
 q,0,0,0,0,0,0,0,0,0,0,0,0,0,0,q
 n,0,0,0,0,0,0,0,0,0,0,0,0,0,0,q
 n,0,0,0,0,0,0,0,0,0,0,0,0,0,0,q
-n,0,0,0,0,0,0,0,0,0,0,0,0,0,0,q
+n,1h,0,0,0,0,0,0,0,0,0,0,0,0,0,q
 n,0,0,0,0,0,1d,1f,1g,0,0,0,0,0,0,q
-n,0,0,0,0,0,1e,1e,1e,1e,1e,1e,1e,0,0,q
+n,1h,0,0,0,0,1e,1e,1e,1e,1e,0,0,1e,1e,q
 n,0,0,0,0,0,0,0,0,0,0,0,0,0,0,q
-q,0,0,0,0,0,0,0,0,0,0,0,0,0,0,q
+q,1h,0,0,0,0,0,0,0,0,0,0,0,0,0,q
 q,0,0,0,0,0,0,0,0,0,0,0,0,0,0,q
 q,q,q,0,q,q,q,q,q,q,q,q,q,q,q,q
 0,0,0,q,0,0,0,0,0,0,0,0,0,0,0,0
 NAME The Homebrew
+ITM 0 13,9
 EXT 3,14 2 11,8
 PAL 2
+TUNE 2
 
 TIL 10
 00000000
@@ -721,6 +723,17 @@ TIL 1g
 11010111
 NAME Counter TOP 3
 
+TIL 1h
+00000000
+01111110
+10000001
+10000001
+11111111
+10100101
+10100101
+10000100
+NAME Table
+
 SPR A
 00000000
 00011111
@@ -781,10 +794,62 @@ DLG 3
 POS 0 3,11
 BLIP 3
 
+SPR d
+01111111
+00000000
+11101101
+10100101
+10000001
+00111101
+11000010
+11000000
+>
+01111111
+00000000
+11101101
+10100101
+10000001
+00111101
+11000010
+11100000
+NAME Employee Head
+DLG 5
+POS 4 10,9
+
+SPR e
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00011111
+00011111
+POS 4 10,8
+
+SPR f
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+00000000
+
 ITM 0
 00001000
 00010000
 00001000
+00111100
+01100100
+00100100
+00011000
+00000000
+>
+00010000
+00001000
+00010000
 00111100
 01100100
 00100100
@@ -832,7 +897,7 @@ I'm a cat
 NAME cat dialog
 
 DLG 1
-You found the manacchiato the Elder Wizard was asking for! It smells... Magic-y.
+You found the manacchiato the Elder Wizard was asking for! It smells... Magic-y.{m = 1}
 NAME tea dialog
 
 DLG 2
@@ -846,6 +911,17 @@ NAME Elder Wizard
 DLG 4
 Maybe this crystal is big enough for the Elder Wizard? It's not even really heavy, it just glides through the air!
 NAME Neat Crystal dialog
+
+DLG 5
+"""
+{
+  - {item "0"} == 1 ?
+    Now, can I get you anything else..? {shk}*sigh*{/shk}
+  - else ?
+    Oh, hey... I think your boss called in for his usual. You can find it just over there...
+}
+"""
+NAME Employee Head dialog
 
 VAR a
 42
@@ -921,30 +997,31 @@ C3,A#3,C,E,A,0,A#,0,0,B2,B3,0,2F,0,0,0
 A#,0,A#3,0,C#,0,F,0,A#,0,0,0,0,0,0,0
 A#2,0,C#3,0,F3,0,A#3,0,D,0,0,0,0,F#3,0,F3
 NAME rhythmic ruins
-TMP MED
+TMP SLW
 SQR P2 P4
 
 TUNE 4
 2C5,0,A,F,D,C5,A,F,2A,0,2F,0,2A,0,0,0
 2C3,0,A2,F2,D2,C3,A2,F2,2A2,0,2F2,0,2A2,0,0,0
 NAME Chocobo
-TMP FST
+TMP MED
 SQR P2 P4
 
-TUNE 5
-2A,0,E,2F#,0,3D,0,0,2G#,0,G#,D#,0,0,0,0
-2A2,0,E2,2F#2,0,3D2,0,0,2G#2,0,G#2,D#2,0,0,0,0
+TUNE 7
+2C,0,2C3,0,2C,0,4G,0,0,0,4F,0,0,0,2E,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+>
+2D,0,6C,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 >
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 >
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
->
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-TMP SLW
-SQR P4 P2
+NAME Ending???
+TMP FST
+SQR P2 P4
 
 BLIP 1
 E5,B5,B5
