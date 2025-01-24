@@ -105,11 +105,22 @@ PAL b
 0,0,0
 216,216,216
 255,255,255
-176,174,211
+157,155,188
 33,33,41
 252,250,255
-200,196,217
+165,162,179
+189,200,241
 NAME Ending
+
+PAL c
+0,0,0
+0,0,216
+255,255,255
+40,154,255
+1,99,255
+26,3,234
+252,249,255
+NAME Start start
 
 ROOM 0
 2g,n,n,n,a,a,a,2g,2g,2g,2g,2g,a,2x,a,2g
@@ -186,8 +197,8 @@ ROOM 3
 0,0,0,1l,1m,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,1k,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,1l,1m,0,0,0,0,p
-0,0,0,0,0,0,0,0,0,0,0,0,0,1n,0,p
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,1o,0
+0,0,0,0,15,15,15,0,0,0,0,0,0,1n,0,p
+0,0,0,15,14,2g,14,15,0,0,0,0,0,0,1o,0
 2y,2y,2y,0,0,0,0,0,0,2y,2y,2y,0,2y,2y,2y
 0,2y,2y,2y,0,0,0,2y,2y,2y,2y,2y,2y,2y,2y,0
 2y,2y,0,2y,2y,2y,2y,2y,0,0,0,0,2y,2y,2y,2y
@@ -200,7 +211,7 @@ p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
 p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p
 NAME Amber Wood 3 [Cave Entrance]
 EXT 0,7 1 15,9
-EXT 15,7 5 0,8
+EXT 15,7 5 0,8 FX tunnel
 PAL 7
 TUNE 2
 
@@ -224,7 +235,7 @@ q,q,q,2w,q,q,q,q,q,q,q,q,q,q,q,q
 NAME The Homebrew
 ITM 0 13,9
 ITM 0 10,9
-EXT 3,14 2 11,8
+EXT 3,14 2 11,8 FX tunnel
 PAL 8
 TUNE 2
 
@@ -343,9 +354,9 @@ PAL b
 
 ROOM a
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,2c,39,2d,0,0,0,0,0,0,0
+0,0,0,0,0,0,37,3a,38,0,0,0,0,0,0,0
+0,0,0,0,0,31,2e,31,2f,31,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,1n,0,1o,0,1n,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -356,10 +367,12 @@ ROOM a
 0,1k,1k,1l,0,1n,0,1o,0,1n,1l,1m,1k,1m,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,21,22,23,24
-0,0,0,0,0,0,0,0,0,0,0,0,20,27,26,25
+0,0,0,0,0,0,0,1i,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME non accessible room
-PAL b
+EXT 7,14 0 5,7 DLG k
+PAL c
+TUNE 8
 
 TIL 10
 0,0,0,0,0,0,0,0
@@ -394,7 +407,7 @@ TIL 12
 5,5,5,5,5,5,1,1
 5,5,5,5,5,5,1,1
 5,5,5,5,5,5,1,1
-5,5,5,5,5,5,1,15
+5,5,5,5,5,5,1,1
 5,5,5,5,5,5,1,1
 NAME rail_vertical
 WAL true
@@ -654,7 +667,7 @@ TIL 30
 5,5,5,5,5,5,5,5
 5,5,5,5,5,5,5,5
 NAME nonvoid
-WAL true
+WAL false
 COL 1
 
 TIL 31
@@ -727,6 +740,41 @@ TIL 36
 0,5,5,5,0,0,0,0
 0,0,0,0,0,0,0,0
 NAME !
+COL 1
+
+TIL 37
+1,1,0,0,0,0,0,0
+1,1,0,0,0,0,0,0
+1,1,0,0,0,0,0,0
+1,1,0,0,0,0,0,0
+1,1,0,0,0,0,0,0
+1,1,0,0,0,0,0,0
+1,1,1,0,0,0,0,0
+1,1,1,0,0,0,0,0
+NAME fakemoonleft
+COL 1
+
+TIL 38
+0,0,0,0,0,0,0,6
+0,0,0,0,0,0,0,6
+0,0,0,0,0,0,0,6
+0,0,0,0,0,0,0,6
+0,0,0,0,0,0,0,3
+0,0,0,0,0,0,0,3
+0,0,0,0,0,0,0,3
+0,0,0,0,0,0,0,1
+NAME fakemoonright
+COL 1
+
+TIL 39
+1,1,1,1,1,1,3,3
+0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0
 COL 1
 
 TIL a
@@ -1727,6 +1775,17 @@ TIL 2z
 NAME Door
 COL 1
 
+TIL 3a
+0,0,0,1,0,0,0,0
+0,0,0,1,0,0,0,0
+0,0,0,0,0,0,0,0
+0,0,0,1,1,0,1,1
+1,1,0,1,1,0,0,0
+0,0,0,0,0,1,0,1
+0,0,0,1,0,0,1,1
+0,0,0,1,0,1,1,1
+COL 1
+
 SPR A
 0,0,0,0,0,0,0,0
 0,0,0,3,3,3,3,3
@@ -1736,7 +1795,7 @@ SPR A
 0,6,4,4,4,6,6,0
 0,0,6,6,6,6,0,0
 0,6,6,6,6,6,6,0
-POS 0 5,7
+POS a 7,8
 COL 2
 
 SPR a
@@ -1822,7 +1881,7 @@ SPR e
 0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0
-0,0,0,6,6,6,6,6
+0,0,0,0,0,0,0,0
 0,0,0,6,6,6,6,6
 NAME hat
 POS 4 10,8
@@ -1952,22 +2011,22 @@ POS 9 5,12
 COL 2
 
 SPR m
-0,0,0,6,6,6,0,0
-0,6,6,0,0,6,6,0
-6,6,0,0,1,0,6,6
-6,0,1,1,0,0,0,6
-6,6,0,0,0,6,6,0
-0,6,6,0,6,0,5,0
-0,0,6,6,0,5,5,5
+0,0,0,7,7,7,0,0
+0,7,7,0,0,7,7,0
+7,7,0,0,1,0,7,7
+7,0,1,1,0,0,0,7
+7,7,0,0,0,7,7,0
+0,7,7,0,7,0,5,0
+0,0,7,7,0,5,5,5
 0,0,0,0,0,0,5,0
 >
-0,0,0,6,6,6,0,0
-0,6,6,0,0,6,6,0
-6,6,0,0,1,0,6,6
-6,0,1,1,0,0,0,6
-6,6,0,0,0,6,6,0
-0,6,6,0,6,5,0,5
-0,0,6,6,0,0,5,0
+0,0,0,7,7,7,0,0
+0,7,7,0,0,7,7,0
+7,7,0,0,1,0,7,7
+7,0,1,1,0,0,0,7
+7,7,0,0,0,7,7,0
+0,7,7,0,7,5,0,5
+0,0,7,7,0,0,5,0
 0,0,0,0,0,5,0,5
 POS 9 15,14
 COL 2
@@ -2004,7 +2063,6 @@ SPR o
 0,0,1,1,1,1,0,0
 0,1,1,1,1,1,1,0
 NAME fake avatar
-POS a 7,8
 COL 2
 
 SPR p
@@ -2020,6 +2078,7 @@ NAME customer1
 DLG h
 POS 4 2,8
 COL 2
+BLIP 9
 
 SPR q
 0,0,0,0,0,0,0,0
@@ -2034,6 +2093,7 @@ NAME customer2
 DLG g
 POS 4 9,11
 COL 2
+BLIP 8
 
 SPR r
 0,0,0,0,0,0,0,0
@@ -2083,7 +2143,7 @@ NAME customer3tail
 DLG f
 POS 4 3,12
 COL 2
-BLIP 5
+BLIP 7
 
 SPR u
 0,0,0,0,0,0,0,0
@@ -2107,6 +2167,21 @@ DLG i
 POS 9 12,12
 COL 2
 BLIP 1
+
+SPR v
+0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0
+0,0,4,0,0,4,0,0
+0,0,3,6,6,3,0,0
+0,0,6,6,6,6,0,0
+0,6,3,2,2,3,6,0
+6,6,3,2,2,3,6,6
+0,0,3,0,0,3,0,0
+NAME frog
+DLG j
+POS 3 5,6
+COL 2
+BLIP 6
 
 ITM 0
 0,0,0,0,3,0,0,0
@@ -2189,7 +2264,7 @@ DLG 3
     Oh, you have my manacchiato. Thank you! {drwi "manacchiato"} And that crystal {drwi "Neat Crystal"} looks big enough. Take those upstairs so that we can begin the lesson! Now excuse me, I think I cast an amnesia spell on myself... OH YES, I have... {wvy}Wait, where am I...?{/wvy} 
   - a == 1 ?
      You have one item, but you still need the other as well for the lesson for today. Halfway there! Now excuse me, I think I cast an amnesia spell on myself... OH YES, I have... {wvy}Wait, where am I...?{/wvy} 
-}Ahhh, my apprentice! I'm afraid your commute has been for naught.{pg}You see, I cannot show you today's {wvy}magical{/wvy} lesson without the proper components for today's teachings.{pg}Say... You'd be a real novice in the making if you can get them for me while I prepare today's lesson! {pg}There are two ingredients in total! One is a {wvy}manacchiato{/wvy} {drwi "manacchiato"}, you would find that in the cafe within the Amber Wood.{pg}The other is a {wvy}crystal{/wvy} {drwi "Neat Crystal"} from the Cave of Clocks! Bring back the biggest you can find!{pg}I am counting on you, my apprentice!
+}{pg}Ahhh, my apprentice! It seems you had fallen asleep. I have terrible news!{pg}You see, I cannot show you today's {wvy}magical{/wvy} lesson without the proper components for today's teachings.{pg}Say... You'd be a real novice in the making if you can get them for me while I prepare today's lesson! {pg}There are two ingredients in total! One is a {wvy}manacchiato{/wvy} {drwi "manacchiato"}, you would find that in the cafe within the Amber Wood.{pg}The other is a {wvy}crystal{/wvy} {drwi "Neat Crystal"} from the Cave of Clocks! Bring back the biggest you can find!{pg}I am counting on you, my apprentice!
 """
 NAME Elder Wizard
 
@@ -2217,7 +2292,7 @@ I think Mr. Wizard doesn't want me to use the telescope right now.{pg}Weird. It'
 NAME telescope dialog
 
 DLG 8
-{rbw}Secret?{/rbw}{pg}{rbw}...Secret :){/rbw}
+{rbw}Secret?{/rbw}{pg}{rbw}...Secret :){/rbw}{pg}{rbw}Did you know Dogs and Cats can walk on the moon? Maybe so can you... ;){/rbw}{s = 1}
 NAME dog dialogue
 
 DLG 9
@@ -2265,6 +2340,14 @@ NAME customer1 dialog
 DLG i
 *The cat is looking up at the stars*
 NAME sprite u dialog
+
+DLG j
+{shk}Ribbit.{/shk} I'd be careful when you enter those caves there, young wizard!{pg}Some say there is a secret so horrifying, that you cannot possibly stomach it and exit the caves alive!{pg}... Or so that is what I heard. {shk}Ribbit.{/shk}
+NAME sprite v dialog
+
+DLG k
+Apprentice...?{pg}{wvy}My Apprentice?{/wvy} Don't tell me you arrived early and had fallen asleep...{pg}{shk}AWAKEN!{/shk}
+NAME exit narration 1
 
 VAR a
 0
@@ -2375,6 +2458,27 @@ NAME Ending???
 TMP FST
 SQR P2 P4
 
+TUNE 8
+4m,0,0,0,0,0,0,4r,0,0,0,0,4f,0,0,0
+16d2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+>
+8r,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+16d2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+>
+4m,0,0,0,0,0,0,4r,0,0,0,0,4f,0,0,0
+16d2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+>
+8r,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+16d2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+>
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+16d2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME gloom
+KEY C,D,D#,F,G,G#,A# d,r,m,f,s,l,t
+TMP SLW
+SQR P2 P4
+ARP INT8
+
 BLIP 1
 E5,B5,B5
 NAME meow
@@ -2409,6 +2513,34 @@ NAME dog
 ENV 43 113 4 96 126
 BEAT 32 61
 SQR P8
+
+BLIP 6
+G#2,F#2,D2
+NAME croak
+ENV 118 65 3 288 66
+BEAT 200 0
+SQR P4
+
+BLIP 7
+G#2,G2,D2
+NAME growgle
+ENV 118 65 3 339 66
+BEAT 212 51
+SQR P4
+
+BLIP 8
+B5,F#5,F#5
+NAME squeak
+ENV 61 50 8 32 53
+BEAT 0 0
+SQR P4
+
+BLIP 9
+C2,F#2,A2
+NAME burp
+ENV 265 463 5 440 292
+BEAT 252 383
+SQR P2
 
 
 </script>
@@ -14104,7 +14236,6 @@ CHAR 9835
 011011
 011000
 000000
-</script>
 </script>
 
 </head>
